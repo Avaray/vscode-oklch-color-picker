@@ -1,26 +1,38 @@
 # ⚙️ OKLCH Color Picker
 
-Color picker for
+**Visual Studio Code extension** that brings modern color picker support for
 [oklch()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch)
 and
 [oklab()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab)
-colors in [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),
-[Tailwind CSS](https://tailwindcss.com/),
-[JavaScript](https://javascript.tm/letter) and
-[TypeScript](https://www.typescriptlang.org/) files.
+CSS color functions across your
+[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),
+[SCSS](https://sass-lang.com/), [LESS](https://lesscss.org/),
+[JavaScript](https://javascript.tm/letter),
+[TypeScript](https://www.typescriptlang.org/) and [React](https://react.dev/)
+files.
 
-## Features
+## The Problem
 
-- 🎨 Visual color decorators for `oklch()` and `oklab()` colors
-- 🖱️ Interactive color picker to modify colors directly in editor
-- ✅ Support for percentages: `oklch(76% 0.177 163.223)`
-- ✅ Support for alpha channel: `oklch(0.6 0.1 120 / 0.5)` and
-  `oklab(0.87 0.03 -0.05 / 0.8)`
-- 🔄 Automatic format preservation (oklch stays oklch, oklab stays oklab)
-- 🎯 Should work in CSS, SCSS, LESS, JavaScript, TypeScript, JSX, TSX
-- 🌈 Tailwind CSS compatibility
+VSCode **doesn't natively support** color pickers for `oklch()` and `oklab()`
+colors. While you get visual color squares and interactive pickers for hex, RGB,
+and HSL values, modern color formats are left without this essential tooling.
 
-## Supported Color Formats
+## The Solution
+
+This extension fills that gap, bringing the same visual color picker experience
+you're used to.
+
+## What You Get
+
+✨ **Visual Color Decorators** - See colored squares next to your `oklch()` and
+`oklab()` values\
+🖱️ **Interactive Color Picker** - Click color to open VSCode's native color
+picker interface\
+🔄 **Format Preservation** - Changes maintain your original format (oklch stays
+oklch, oklab stays oklab)\
+🌈 **Tailwind Compatible** - Full support for
+[Tailwind CSS](https://tailwindcss.com/) config files and `@plugin` blocks\
+✅ **Flexible Syntax** - Handles percentages, decimals, and alpha channels
 
 ### OKLCH (Cylindrical)
 
@@ -51,10 +63,12 @@ colors in [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),
 2. Open [VSCode](https://code.visualstudio.com/)
 3. Go to **Extensions** → ... menu → **Install from VSIX**...
 
+> Publishing this extension to the marketplace is not planned at this time.
+
 ## Usage
 
-The extension activates automatically when you open files containing `oklch()`
-or `oklab()` colors.
+The extension activates automatically when you open mentioned files containing
+`oklch()` or `oklab()` colors.
 
 ### Using the Color Picker
 
