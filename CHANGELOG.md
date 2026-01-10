@@ -23,7 +23,7 @@ this file.
 
 - Built with [culori](https://www.npmjs.com/package/culori) library for accurate
   color space conversions.
-- Minimum VS Code version: [1.50.0](https://code.visualstudio.com/updates/v1_50)
+- Minimum VSCode version: [1.50.0](https://code.visualstudio.com/updates/v1_50)
 - Should work seamlessly alongside other color extensions
 
 ### Known Issues
