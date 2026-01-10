@@ -1,0 +1,57 @@
+{
+  "activationEvents": [],
+  "bugs": {
+    "url": "https://github.com/Avaray/vscode-oklch-color-picker/issues"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "dependencies": {
+    "culori": "^4.0.2"
+  },
+  "description": "Color picker for oklch() and oklab() colors in CSS, Tailwind CSS, JavaScript and TypeScript files",
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.50.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.52.0"
+  },
+  "displayName": "OKLCH Color Picker",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "homepage": "https://github.com/Avaray/vscode-oklch-color-picker",
+  "icon": "icon.png",
+  "keywords": [
+    "color",
+    "colorpicker",
+    "css",
+    "oklab",
+    "oklch",
+    "picker",
+    "tailwind"
+  ],
+  "license": "MIT",
+  "main": "./out/extension.js",
+  "name": "vscode-oklch-color-picker",
+  "publisher": "Avaray",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Avaray/vscode-oklch-color-picker"
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "lint": "eslint src",
+    "package": "vsce package",
+    "pretest": "npm run compile && npm run lint",
+    "publish": "vsce publish",
+    "test": "vscode-test",
+    "vscode:prepublish": "npm run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "version": "0.9.9"
+}

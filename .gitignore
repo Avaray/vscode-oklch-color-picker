@@ -1,0 +1,51 @@
+# Compiled output
+out/
+dist/
+*.vsix
+
+# Dependencies
+node_modules/
+
+# Lock files - wybierz jeden!
+# Jeśli używasz npm:
+package-lock.json
+# Jeśli używasz tylko Buna (odkomentuj poniżej, zakomentuj powyżej):
+# bun.lock
+
+# Testing
+.vscode-test/
+.vscode-test.*
+coverage/
+
+# IDE & Editor
+.vscode/
+.vscode-server/
+*.code-workspace
+.idea/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+theme.css
+
+# Environment
+.env
+.env.local
+.env.*.local
