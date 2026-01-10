@@ -1,7 +1,13 @@
 # ⚙️ OKLCH Color Picker
 
-Color picker for `oklch()` and `oklab()` colors in CSS, Tailwind CSS, JavaScript
-and TypeScript files.
+Color picker for
+[oklch()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch)
+and
+[oklab()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab)
+colors in [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),
+[Tailwind CSS](https://tailwindcss.com/),
+[JavaScript](https://javascript.tm/letter) and
+[TypeScript](https://www.typescriptlang.org/) files.
 
 ## Features
 
@@ -11,7 +17,7 @@ and TypeScript files.
 - ✅ Support for alpha channel: `oklch(0.6 0.1 120 / 0.5)` and
   `oklab(0.87 0.03 -0.05 / 0.8)`
 - 🔄 Automatic format preservation (oklch stays oklch, oklab stays oklab)
-- 🎯 Works in CSS, SCSS, LESS, JavaScript, TypeScript, JSX, TSX
+- 🎯 Should work in CSS, SCSS, LESS, JavaScript, TypeScript, JSX, TSX
 - 🌈 Tailwind CSS compatibility
 
 ## Supported Color Formats
