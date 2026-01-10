@@ -32,9 +32,3 @@ this file.
   [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
   extension, add `"editor.defaultColorDecorators": "always"` to settings for
   best experience
-
-## [Unreleased]
-
-- Future updates and improvements will be listed here
-
-[1.0.0]: https://github.com/Avaray/oklch-color-picker/releases/tag/v1.0.0
