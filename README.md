@@ -13,7 +13,7 @@ files.
 
 ## Why This Extension?
 
-VS Code **doesn't natively support** color pickers for `oklch()` and `oklab()`
+VSCode **doesn't natively support** color pickers for `oklch()` and `oklab()`
 colors. While you get visual color squares and interactive pickers for
 [hex, RGB, and HSL](https://en.wikipedia.org/wiki/Web_colors) values, modern
 color formats are left without this essential tooling.
