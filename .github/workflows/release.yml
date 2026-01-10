@@ -85,7 +85,7 @@ jobs:
           body: |
             ### Installation
             Download the `.vsix` file below and install it in VSCode:
-            1. Open VS Code
+            1. Open VSCode
             2. Go to Extensions (`Ctrl+Shift+X`)
             3. Click `...` menu → `Install from VSIX...`
             4. Select the downloaded file
