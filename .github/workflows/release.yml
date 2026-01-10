@@ -83,8 +83,6 @@ jobs:
           tag_name: v${{ needs.check-version.outputs.version }}
           name: Release v${{ needs.check-version.outputs.version }}
           body: |
-            ## OKLCH Color Picker v${{ needs.check-version.outputs.version }}
-            
             ### Installation
             Download the `.vsix` file below and install it in VS Code:
             1. Open VS Code
