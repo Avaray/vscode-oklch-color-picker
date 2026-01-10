@@ -11,16 +11,15 @@ CSS color functions across your
 [TypeScript](https://www.typescriptlang.org/) and [React](https://react.dev/)
 files.
 
-## The Problem
+## Why This Extension?
 
-VSCode **doesn't natively support** color pickers for `oklch()` and `oklab()`
-colors. While you get visual color squares and interactive pickers for hex, RGB,
-and HSL values, modern color formats are left without this essential tooling.
+VS Code **doesn't natively support** color pickers for `oklch()` and `oklab()`
+colors. While you get visual color squares and interactive pickers for
+[hex, RGB, and HSL](https://en.wikipedia.org/wiki/Web_colors) values, modern
+color formats are left without this essential tooling.
 
-## The Solution
-
-This extension fills that gap, bringing the same visual color picker experience
-you're used to.
+**This extension fixes that** - bringing you the same visual color picker
+experience you're used to, but for modern perceptually uniform color spaces.
 
 ## What You Get
 
