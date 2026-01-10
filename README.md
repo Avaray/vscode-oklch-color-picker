@@ -1,4 +1,4 @@
-# OKLCH Color Picker
+# ⚙️ OKLCH Color Picker
 
 Color picker for `oklch()` and `oklab()` colors in CSS, Tailwind CSS, JavaScript
 and TypeScript files.
@@ -40,7 +40,7 @@ and TypeScript files.
 
 1. Download
    [.vsix](https://github.com/Avaray/vscode-oklch-color-picker/releases/latest)
-   from
+   file from
    [GitHub Releases](https://github.com/Avaray/vscode-oklch-color-picker/releases)
 2. Open [VSCode](https://code.visualstudio.com/)
 3. Go to **Extensions** → ... menu → **Install from VSIX**...
