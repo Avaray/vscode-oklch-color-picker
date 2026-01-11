@@ -20,7 +20,7 @@ and interactive pickers for
 color formats are left without this essential tooling.
 
 **This extension fixes that** - bringing you the same visual color picker
-experience you're used to, but for modern perceptually uniform color spaces.
+experience you're used to.
 
 ## What You Get
 
