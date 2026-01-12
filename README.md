@@ -1,58 +1,30 @@
 # ⚙️ OKLCH Color Picker
 
-**Visual Studio Code extension** that brings modern color picker support for
+**Visual Studio Code extension** that brings color picker support for
 [oklch()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch)
 and
 [oklab()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab)
-CSS color functions across your
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),
-[SCSS](https://sass-lang.com/), [LESS](https://lesscss.org/),
-[JavaScript](https://javascript.tm/letter),
-[TypeScript](https://www.typescriptlang.org/) and [React](https://react.dev/)
-files.
+CSS color functions across your files.
 
 ## Why This Extension?
 
-[VSCode](https://code.visualstudio.com/) **doesn't natively support** color
-pickers for `oklch()` and `oklab()` colors. While you get visual color squares
-and interactive pickers for
-[hex, RGB, and HSL](https://en.wikipedia.org/wiki/Web_colors) values, modern
-color formats are left without this essential tooling.
-
-**This extension fixes that** - bringing you the same visual color picker
-experience you're used to.
+While [VSCode](https://code.visualstudio.com/) has native support for `oklch()`
+and `oklab()`, this support is primarily focused on CSS files. This extension
+extends that support to [JavaScript](https://javascript.tm/letter),
+[TypeScript](https://www.typescriptlang.org/), and [React](https://react.dev/)
+files by default, while allowing you to fully customize the list of supported
+file types.
 
 ## What You Get
 
-✨ **Visual Color Decorators** - See colored squares next to your `oklch()` and
-`oklab()` values\
-🖱️ **Interactive Color Picker** - Click color to open VSCode's native color
-picker interface\
-🔄 **Format Preservation** - Changes maintain your original format (oklch stays
-oklch, oklab stays oklab)\
-🌈 **Tailwind Compatible** - Full support for
-[Tailwind CSS](https://tailwindcss.com/) config files and `@plugin` blocks\
-✅ **Flexible Syntax** - Handles percentages, decimals, and alpha channels
-
-### OKLCH (Cylindrical)
-
-```css
-.example {
-  color: oklch(0.87 0.03 288.63);
-  background: oklch(76% 0.177 163.223);
-  border: oklch(0.6 0.1 120 / 0.5);
-}
-```
-
-### OKLAB (Cartesian)
-
-```css
-.example {
-  color: oklab(0.87 0.03 -0.05);
-  background: oklab(76% 0.05 0.1);
-  border: oklab(0.6 0.15 -0.1 / 0.8);
-}
-```
+- ✨ **Visual Color Decorators** - See colored squares next to your `oklch()`
+  and `oklab()` values
+- 🖱️ **Color Picker** - Click color to open VSCode's native color picker
+  interface
+- 🔄 **Format Preservation** - Changes maintain your original format (oklch
+  stays oklch, oklab stays oklab)
+- ✅ **Flexible Syntax** - Handles percentages, decimals, and alpha channels
+- ⚙️ **Configurable** - Choose exactly which file types to enable the picker for
 
 ## Installation
 
@@ -65,10 +37,30 @@ oklch, oklab stays oklab)\
 
 > Publishing this extension to the marketplace is not planned at this time.
 
+## Configuration
+
+By default, the extension is enabled only for JavaScript, TypeScript, and React
+files to avoid conflicts with VSCode's native CSS color picker. You can
+customize the list of enabled file types in the settings.
+
+```json
+{
+  "oklchColorPicker.languages": [
+    "javascript", // default
+    "typescript", // default
+    "javascriptreact", // default
+    "typescriptreact", // default
+    "css", // custom
+    "scss", // custom
+    "less", // custom
+    "tailwindcss" // custom
+  ]
+}
+```
+
 ## Usage
 
-The extension activates automatically when you open mentioned files containing
-`oklch()` or `oklab()` colors.
+The extension activates automatically when you open a supported file.
 
 ### Using the Color Picker
 
@@ -77,42 +69,17 @@ The extension activates automatically when you open mentioned files containing
 3. Use the color picker to adjust the color
 4. The color value updates automatically in your file
 
-### Example Files
-
-**CSS/SCSS:**
-
-```css
-:root {
-  --primary: oklch(0.7 0.2 250);
-  --secondary: oklab(0.6 0.1 -0.15);
-}
-```
-
-**JavaScript/TypeScript:**
-
-```javascript
-const colors = {
-  primary: "oklch(0.87 0.03 288.63)",
-  accent: "oklab(0.76 0.05 0.1)",
-};
-```
-
-**Tailwind CSS:**
-
-```css
-@plugin "..." {
-  primary: oklch(76% 0.177 163.223);
-  secondary: oklab(0.65 0.12 -0.08);
-}
-```
-
 ## Known Issues & Troubleshooting
 
-### Color decorators don't appear with Tailwind CSS IntelliSense
+### Double Color Pickers
 
-If you're using
-[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss),
-add this to your VSCode settings:
+If you see two color squares next to each other in CSS files, it means both VS
+Code's native picker and this extension are active. Remove "css" (or related
+languages) from the `oklchColorPicker.languages` setting to fix this.
+
+### Color decorators don't appear at all
+
+Make sure you have the following setting enabled:
 
 ```json
 {
