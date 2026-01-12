@@ -16,6 +16,7 @@
     "@types/vscode": "^1.50.0",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.27.2",
     "eslint": "^9.39.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.52.0"
@@ -44,13 +45,14 @@
     "url": "https://github.com/Avaray/vscode-oklch-color-picker"
   },
   "scripts": {
+    "build": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify",
     "compile": "tsc -p ./",
     "lint": "eslint src",
     "package": "vsce package",
-    "pretest": "npm run compile && npm run lint",
+    "pretest": "bun run compile && bun run lint",
     "publish": "vsce publish",
     "test": "vscode-test",
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "bun run compile",
     "watch": "tsc -watch -p ./"
   },
   "version": "1.0.0"
