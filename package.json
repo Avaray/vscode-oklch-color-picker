@@ -1,5 +1,14 @@
 {
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:css",
+    "onLanguage:scss",
+    "onLanguage:less",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onLanguage:tailwindcss"
+  ],
   "bugs": {
     "url": "https://github.com/Avaray/vscode-oklch-color-picker/issues"
   },
@@ -45,15 +54,13 @@
     "url": "https://github.com/Avaray/vscode-oklch-color-picker"
   },
   "scripts": {
+    "vscode:prepublish": "bun run build",
     "build": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify",
     "compile": "tsc -p ./",
-    "lint": "eslint src",
+    "watch": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --sourcemap --watch",
     "package": "vsce package",
-    "pretest": "bun run compile && bun run lint",
-    "publish": "vsce publish",
     "test": "vscode-test",
-    "vscode:prepublish": "bun run compile",
-    "watch": "tsc -watch -p ./"
+    "lint": "eslint src"
   },
   "version": "1.0.0"
 }
