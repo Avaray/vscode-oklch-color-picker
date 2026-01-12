@@ -1,13 +1,13 @@
 {
   "activationEvents": [
     "onLanguage:css",
-    "onLanguage:scss",
-    "onLanguage:less",
     "onLanguage:javascript",
-    "onLanguage:typescript",
     "onLanguage:javascriptreact",
-    "onLanguage:typescriptreact",
-    "onLanguage:tailwindcss"
+    "onLanguage:less",
+    "onLanguage:scss",
+    "onLanguage:tailwindcss",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
   ],
   "bugs": {
     "url": "https://github.com/Avaray/vscode-oklch-color-picker/issues"
@@ -15,6 +15,26 @@
   "categories": [
     "Programming Languages"
   ],
+  "contributes": {
+    "configuration": {
+      "properties": {
+        "oklchColorPicker.languages": {
+          "default": [
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact"
+          ],
+          "description": "List of language IDs where the color picker should be active. Add 'css', 'scss', 'less', 'tailwindcss' if you need it (VS Code supports them natively).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "title": "OKLCH Color Picker"
+    }
+  },
   "dependencies": {
     "culori": "^4.0.2"
   },
@@ -54,13 +74,13 @@
     "url": "https://github.com/Avaray/vscode-oklch-color-picker"
   },
   "scripts": {
-    "vscode:prepublish": "bun run build",
     "build": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify",
     "compile": "tsc -p ./",
-    "watch": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --sourcemap --watch",
+    "lint": "eslint src",
     "package": "vsce package",
     "test": "vscode-test",
-    "lint": "eslint src"
+    "vscode:prepublish": "bun run build",
+    "watch": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --sourcemap --watch"
   },
   "version": "1.0.0"
 }
