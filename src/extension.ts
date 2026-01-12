@@ -13,7 +13,6 @@ export function activate(context: vscode.ExtensionContext) {
 		{ language: "javascriptreact" },
 		{ language: "typescriptreact" },
 		{ language: "tailwindcss" },
-		{ scheme: "file", pattern: "**/*.css" },
 	];
 
 	const provider = new OklabColorProvider();
