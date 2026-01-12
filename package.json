@@ -1,13 +1,17 @@
 {
   "activationEvents": [
     "onLanguage:css",
+    "onLanguage:html",
     "onLanguage:javascript",
     "onLanguage:javascriptreact",
     "onLanguage:less",
+    "onLanguage:php",
     "onLanguage:scss",
+    "onLanguage:svelte",
     "onLanguage:tailwindcss",
     "onLanguage:typescript",
-    "onLanguage:typescriptreact"
+    "onLanguage:typescriptreact",
+    "onLanguage:vue"
   ],
   "bugs": {
     "url": "https://github.com/Avaray/vscode-oklch-color-picker/issues"
