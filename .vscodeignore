@@ -12,8 +12,8 @@ bun.lock
 DEVELOPMENT.md
 eslint.config.mjs
 funding.yml
+node_modules/
 out/test/**
 package-lock.json
 src/**
 theme.css
-vsc-extension-quickstart.md
