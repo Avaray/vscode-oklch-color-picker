@@ -4,20 +4,37 @@ import { converter, parse } from "culori";
 const toRgb = converter("rgb");
 
 export function activate(context: vscode.ExtensionContext) {
-	const selector: vscode.DocumentSelector = [
-		{ language: "css" },
-		{ language: "scss" },
-		{ language: "less" },
-		{ language: "javascript" },
-		{ language: "typescript" },
-		{ language: "javascriptreact" },
-		{ language: "typescriptreact" },
-		{ language: "tailwindcss" },
-	];
+	const registerProvider = () => {
+		const config = vscode.workspace.getConfiguration("oklchColorPicker");
+		const languages = config.get<string[]>("languages") || [];
 
-	const provider = new OklabColorProvider();
+		const selector: vscode.DocumentSelector = languages.map((language) => ({
+			language,
+		}));
+
+		if (selector.length > 0) {
+			const provider = new OklabColorProvider();
+			const disposable = vscode.languages.registerColorProvider(
+				selector,
+				provider,
+			);
+			context.subscriptions.push(disposable);
+			return disposable;
+		}
+		return null;
+	};
+
+	let providerDisposable = registerProvider();
+
 	context.subscriptions.push(
-		vscode.languages.registerColorProvider(selector, provider),
+		vscode.workspace.onDidChangeConfiguration((e) => {
+			if (e.affectsConfiguration("oklchColorPicker.languages")) {
+				if (providerDisposable) {
+					providerDisposable.dispose();
+				}
+				providerDisposable = registerProvider();
+			}
+		}),
 	);
 }
 
